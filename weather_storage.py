@@ -36,7 +36,7 @@ try:
   credentials = service_account.Credentials.from_service_account_info(credentials_dict)
   storage_client = storage.Client(credentials=credentials)
   bucket = storage_client.get_bucket('data-ops-teste')
-  blob = bucket.blob('weather_info.txt')
+  blob = bucket.blob('weather_info_action.txt')
 
   blob.upload_from_string(info + '\n')
 
